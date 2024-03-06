@@ -1,0 +1,280 @@
+@use 'event.scss';
+@use 'icone';
+@use 'nrpagina';
+@use 'form';
+@use 'cronometro';
+@use 'formdesconto';
+
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: black
+}
+
+.navbar-toggler {
+    color: black;
+    background-color: rgb(160, 31, 31)
+}
+
+.nav .nav-link.active {
+    background-color: red;
+}
+
+/* ajustando a transição dos link do nav-bar */
+
+.nav-link {
+    position: relative;
+    color: white;
+}
+
+.nav-link::after {
+    content: '';
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    height: 2px;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover {
+    color: red
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+/*-------------------------------------------*/
+
+.logo {
+    max-width: 160px;
+    transform: translateX(-100%);
+    transition: opacity 1s ease, transform 2s ease;
+}
+
+/* ajustando dropdown */
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: .125em;
+    overflow: hidden;
+    overflow-x: auto;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    .dropdown-menu {
+        max-width: 100%;
+    }
+}
+
+/*-------------------------------------------*/
+
+/* ajustando altura carrosel */
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+/*-------------------------------------------*/
+
+/*---------------------Whats-icone----------------------*/
+
+.whats__icone {
+    max-width: 130px;
+    position: fixed;
+    bottom: 2px;
+    right: 1px;
+    z-index: 999;
+    animation: float 2s ease-in-out infinite;
+
+    i img {
+        max-width: 120px;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*-------------------------------------------*/
+
+/*-------------------Footer e mapgoole-----------------------*/
+
+
+footer {
+    background-color: black;
+    color: white;
+    
+}
+
+.map {
+    position: relative;
+    padding-top: 0px;
+}
+
+/*-------------------------------------------*/
+
+/*---------------------Slide empresas----------------------*/
+
+.tituloslideemp {
+    text-align: center;
+    font-size: 30px;
+}
+
+.slider {
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 250px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide-empresa{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide-empresa img {
+    width: 100%;
+    height: auto;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 1320px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #eae2e1;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background-color: #c6b0b0;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+.navigation-auto div{
+    border: 2px solid #f90000;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.sobrenos_image{
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .sobrenos_image {
+        max-width: 95%;
+    }
+}
+
+/* Mídia query para telas menores, como tablets */
+@media screen and (max-width: 768px) {
+    .slides {
+        width: 300%;
+        height: 200px;
+    }
+
+    .slide-empresa {
+        width: 33.33%;
+    }
+}
+
+/* Mídia query para telas pequenas, como celulares */
+@media screen and (max-width: 480px) {
+    .slides {
+        width: 200%;
+        height: 150px;
+    }
+
+    .manual-navigation{
+        position: static;
+    }
+
+    #radio2:checked ~ .first{
+        margin-left: -50%;
+    }
+
+    .slide-empresa {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .list-group{
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+
+

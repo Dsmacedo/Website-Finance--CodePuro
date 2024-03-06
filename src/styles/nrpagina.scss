@@ -1,0 +1,197 @@
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/pexels-anna-shvets-59304442160p-ezgif.com-video-to-gif-converter.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50vh;
+    opacity: 80%;
+}
+
+.hero::before {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000000;
+    content: '';
+    opacity: .8;
+}
+
+.hero__text {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 800;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.952);
+}
+
+/*-----------------Cards saltantes-------------------------*/
+.resp__card {
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 15px;
+}
+.cards{
+    height: 370px;
+    width: 400px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, var(--clr1), var(--clr2));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgba(207, 202, 202, 0.4);
+    transition: transform 0.3s;
+}
+
+.cards:hover{
+    transform: scale(1.05);
+}
+
+.cards h1{
+    color: #000000;
+    font-weight: 450;
+    margin: 10px 0;
+    margin-bottom: 10px;
+    border-radius: 0 50px 50px 0;
+    background: #fff;
+    border-radius: 0 50px 50px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 55px;
+    width: 100%;
+}
+
+.cards span{
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    width: 230px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.cards span .bi-check-circle-fill{
+    font-size: 20px;
+    padding-right: 5px;
+}
+
+.cards input{
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 40px;
+    background: none;
+    transition: 0.3s;
+}
+
+.cards input:hover{
+    background: rgba(255,255,255,0.2);
+}
+
+
+@media (max-width: 1024px) {
+    .resp__card {
+        display: block;
+    }
+
+    .cards{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/*-------------------------------*/
+
+/*--------descrição NR-----------------------*/
+.desc_nr {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.title__center {
+    text-align: center;
+}
+/*------------------------------------*/
+
+
+/*--------Botão-----------------------*/
+
+
+.esp-botton {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.btn-fale {
+    padding:  10 120px;
+    box-shadow: 0 0 10px rgba(176, 168, 168, 0.4);
+    
+    animation: pulse 4.5s infinite;
+}
+
+
+/*------------------------------------*/
+.hometecno{
+    max-width: 500px;
+    border-radius: 20px;
+    margin-top: 200px;
+}
+
+.image-text-section {
+    margin-top: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 200px;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+/*---------------btn do formulario de desconto---------------------*/
+.btn-formdesconto
+{
+    margin-top: 15px;
+}
+/*------------------------------------*/
+
+/*---------------Footer da pagina sobre-nós---------------------*/
+.footer-sobrenos {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/*------------------------------------*/

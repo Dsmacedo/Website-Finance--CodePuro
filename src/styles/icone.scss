@@ -1,0 +1,18 @@
+.icone {
+    max-width: 50px; 
+    padding-right: 5px;
+}
+
+// Icone das redes sociais //
+.icone-redes{
+    display: flex;
+    
+    a i{
+        padding-right: 60px;
+    }
+
+    a i img {
+        width: 55px;
+    }
+}
+
