@@ -580,37 +580,33 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"5Eyl2":[function(require,module,exports) {
 document.getElementById("form").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evita que o formulário seja enviado normalmente
-    // Captura os valores dos campos do formulário
+    event.preventDefault();
     var nome = document.getElementById("nome").value;
     var email = document.getElementById("email").value;
     var tel = document.getElementById("tel").value;
     var assunto = document.getElementById("assunto").value;
     var mensagem = document.getElementById("mensagem").value;
-    // Verifica se todos os campos foram preenchidos
     if (nome === "" || email === "" || tel === "" || assunto === "" || mensagem === "") {
         alert("Por favor, preencha todos os campos do formul\xe1rio.");
-        return; // Aborta o envio do formulário se algum campo estiver vazio
+        return;
     }
-    //Define o e-mail correspondente ao assunto
     var emailDestino;
     switch(assunto){
         case "comercial":
-            emailDestino = "solange@escolatecnocursos.com.br";
+            emailDestino = "danilosdemacedo@gmail.com";
             break;
         case "financeiro":
-            emailDestino = "solange@escolatecnocursos.com.br";
+            emailDestino = "danilosdemacedo@gmail.com";
             break;
         case "suporte":
-            emailDestino = "suporte@escolatecnocursos.com.br";
+            emailDestino = "danilosdemacedo@gmail.com";
             break;
         case "trabalhe_conosco":
-            emailDestino = "naiane.tomaz@escolatecnocursos.com.br";
+            emailDestino = "danilosdemacedo@gmail.com";
             break;
         default:
             emailDestino = "contato@example.com";
     }
-    // Configura os dados a serem enviados
     var formData = new FormData();
     formData.append("service_id", "service_6ttoeeo");
     formData.append("template_id", "template_6ckzw2o");
@@ -620,8 +616,7 @@ document.getElementById("form").addEventListener("submit", function(event) {
     formData.append("tel", tel);
     formData.append("assunto", assunto);
     formData.append("mensagem", mensagem);
-    formData.append("principal_email", emailDestino); // Adicione o campo de cópia (CC) aqui
-    // Envia os dados
+    formData.append("principal_email", emailDestino);
     $.ajax({
         url: "https://api.emailjs.com/api/v1.0/email/send-form",
         type: "POST",
@@ -660,11 +655,12 @@ jQuery("#form").validate({
         },
         assunto: {
             required: function(element) {
+                // Função de validação customizada para o campo de assunto
                 return jQuery("#assunto option:selected").val() === "";
             }
         },
         mensagem: {
-            required: true // Adicionando a regra de requerido para a mensagem
+            required: true
         }
     },
     messages: {

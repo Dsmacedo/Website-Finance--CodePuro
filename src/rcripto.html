@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NR-10 Tecno-Cursos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="./styles/main.scss">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body class="text-bg-dark">
+    <header class="navbar navbar-expand-lg sticky-top p-2">
+        <div class="container">
+            <a href="./index.html">
+                <img class="logo m-0" src="./images/BullSeven.png" style="max-width: 80px;"  alt="">
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+                <ul class="nav nav-pills d-block d-md-flex">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link">
+                            <i class="bi bi-house-door-fill"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle active" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            Treinamentos
+                            <i class="bi bi-caret-down-fill"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./rvar.html">Renda Variavel</a></li>
+                            <li><a class="dropdown-item" href="./rfix.html">Renda Fixa</a></li>
+                            <li><a class="dropdown-item" href="./rcripto.html">Foco em CriptoAtivos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">
+                            <i class="bi bi-headset"></i>
+                            Contato
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./sobre-nos.html" class="nav-link">
+                            <i class="bi bi-building-fill-gear"></i>
+                            Sobre Nós
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header class="hero">
+        <div class="container">
+            <p class="hero__text">
+                <span>Foco em CriptoAtivos</span>
+            </p>
+        </div>
+    </header>
+    <section class="container">
+        <div class="resp__card">
+            <div class="cards" style="--clr1:#f6ea09; --clr2:#fb0a0a; --text:#020202;">
+                <h1>Teórico/Online</h1>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Fundamentos do Mercado
+                </span>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Aulas Interativa
+                </span>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Acesso Flexível.
+                </span>
+            </div>
+            <div class="cards" style="--clr1:#f60d09; --clr2:#d4b800; --text:#020202;">
+                <h1>Prático/Presencial</h1>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Hands-on no Mercado.
+                </span>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Operações Guiadas
+                </span>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Networking Exclusivo
+                </span>
+            </div>
+            <div class="cards" style="--clr1:#55d924; --clr2:#050505; --text:#d55e86;">
+                <h1>Certificação</h1>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Certificação Reconhecida 
+                </span>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Diferencial Competitivo
+                </span>
+                <span>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Requisito para Especializaçõe
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="container desc_nr">
+        <h2 class="event__details__title">Quem pode fazer o treinamento de Foco em CriptoAtivos?/h4>
+            <h4 class="event__details__description">
+                Para aqueles que querem dominar o universo das criptomoedas, blockchain, NFTs e DeFi. Ideal para investidores que desejam explorar o potencial das finanças digitais e descentralizadas.</h4>
+                
+            <!-- Formulario de desconto-------------------. -->
+            <div class="container title__center esp-botton">
+                <button class="btn btn-success btn-fale" id="show-login"> Faça um orçamento</button>
+            </div>
+            <div class="popup">
+                <div class="close-btn">&times;</div>
+                <form class="form-desconto" name="form-desconto" id="form-desconto">
+                    <h2>Formulário de Desconto</h2>
+                    <div class="form-element">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" name="nome" id="nome" placeholder="Digite seu nome">
+                    </div>
+                    <div class="form-element">
+                        <label for="email" class="form-label">email</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu email">
+                    </div>
+                    <div class="form-element">
+                        <label for="tel" class="form-label">WhatsApp</label>
+                        <input type="tel" class="form-control" name="tel" id="tel" placeholder="(00)00000-0000">
+                    </div>
+                    <div class="form-element">
+                        <label for="cidade" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" name="cidade" id="cidade"
+                            placeholder="Digite sua cidade">
+                    </div>
+                    <div class="form-element">
+                        <label for="estado" class="form-label">Estado</label>
+                        <input type="text" class="form-control" name="estado" id="estado"
+                            placeholder="Digite seu estado">
+                    </div>
+                    <button value="Submit" class="btn btn-success btn-formdesconto" >Enviar</button>
+                </form>
+            </div>
+            <!-------------------------------------------------------------------------. -->
+
+            <div data-aos="fade-right">
+                <h2 class="title__center">O que você vai aprender</h2>
+                <h4 class="event__details__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus aspernatur earum inventore incidunt eos quidem, dolorem ipsa ad natus fugit odio quis soluta unde. Id sunt veniam magni exercitationem sint!</h4>
+                <h4 class="title__center event__details__description"> <i class="bi bi-chevron-double-up"
+                        style="color: yellow"></i> #####################</h4>
+                <h4 class="title__center event__details__description"> <i class="bi bi-chevron-double-up"
+                        style="color: yellow"></i> ####################
+                </h4>
+            </div>
+
+            
+    </section>
+    <section>
+        <a  href="https://wa.me  " class=" container whats__icone">
+            <i><img src="./images/icones/whatsap_3d.png" alt=""></i>
+        </a>
+    </section>
+
+    <footer class="footer p-2 text-center">
+        <div class="container">
+            <span>@ BullSeven. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/form-desconto.js"></script>
+</body>
+
+</html>
